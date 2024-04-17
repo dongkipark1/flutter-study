@@ -1,12 +1,31 @@
+import 'package:bottom_app/data/tab.dart';
 import 'package:flutter/material.dart';
 
 class MoreHolder extends StatelessWidget {
-  const MoreHolder({
-    super.key,
-  });
-
+  @override
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("More Holder"));
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("더보기"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 30),
+        child: GridView.count(
+          crossAxisCount: 4, // ➊
+          children: List.generate(
+            tabs.length,
+                (index) => Column(
+              children: [
+                Icon(tabs[index].icon),
+                const SizedBox(height: 5),
+                Text(tabs[index].text),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
