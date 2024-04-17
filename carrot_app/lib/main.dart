@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'carrot_app',
       debugShowCheckedModeBanner: false,
       home: MainScreens(),
-      theme: theme(),
+      theme: theme(), // appbar에 스타일이 적용된 이유
     );
   }
 }
