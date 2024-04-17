@@ -1,8 +1,14 @@
 import 'package:bottom_app/core/chat_card.dart';
+import 'package:bottom_app/core/chat_icon_button.dart';
+import 'package:bottom_app/core/my_chat.dart';
+import 'package:bottom_app/core/other_chat.dart';
+import 'package:bottom_app/core/time_line.dart';
 import 'package:bottom_app/data/chat.dart';
 import 'package:bottom_app/data/user.dart';
 import 'package:bottom_app/ui/holder/main_holder.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,4 +1,5 @@
 import 'package:bottom_app/data/chat.dart';
+import 'package:bottom_app/ui/holder/second/chat_room_holder.dart';
 import 'package:flutter/material.dart';
 
 class ChatCard extends StatelessWidget {
@@ -12,7 +13,14 @@ class ChatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatRoomScreen(),
+          ),
+        );
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
         child: Row(
@@ -39,7 +47,7 @@ class ChatCard extends StatelessWidget {
                 Text(
                   chat.time,
                   style:
-                  const TextStyle(color: Color(0xFFa5a5a5), fontSize: 12),
+                      const TextStyle(color: Color(0xFFa5a5a5), fontSize: 12),
                 ),
                 const SizedBox(
                   height: 5,
@@ -47,7 +55,7 @@ class ChatCard extends StatelessWidget {
                 if (chat.count != "0")
                   Container(
                     padding:
-                    const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: const Color(0xFFde6344)),
