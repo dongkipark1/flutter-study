@@ -1,4 +1,5 @@
 import 'package:carrot_app/models/chat_message.dart';
+import 'package:carrot_app/screens/chatting/chat_container.dart';
 import 'package:carrot_app/screens/components/appbar_preferred_size.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class ChattingScreen extends StatelessWidget {
       body: ListView(
         children: List.generate(
           chatMessageList.length,
-          (index) => Container(),
+          (index) => ChatContainer(chatMessage: chatMessageList[index]),
         ),
       ),
     );

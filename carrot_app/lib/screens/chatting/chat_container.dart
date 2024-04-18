@@ -54,6 +54,7 @@ class ChatContainer extends StatelessWidget {
               ),
             ),
             Visibility(
+              visible: chatMessage.imageUri != null,
               child: Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: ClipRRect(
