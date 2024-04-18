@@ -1,5 +1,6 @@
 import 'package:carrot_app/models/chat_message.dart';
 import 'package:carrot_app/models/icon_menu.dart';
+import 'package:carrot_app/models/neighborhood_life.dart';
 import 'package:carrot_app/models/products.dart';
 import 'package:carrot_app/screens/main_screens.dart';
 import 'package:carrot_app/theme.dart';
@@ -51,4 +52,5 @@ class ImageContainer extends StatelessWidget {
     );
   }
 }
+
 
